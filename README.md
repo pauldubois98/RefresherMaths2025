@@ -7,12 +7,12 @@ In order to pass the course, you need to validate each session.
 Validating a session can be done either by *coming in person to the session*, or by successfully *solving all compulsory questions* from the corresponding problem set.
 
 - Session 1 (25th of August 2025): Combinatorics
-    - Notes
-    - Problem Set
-    - Solutions
+    - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCombinatorics/NotesCombinatorics.pdf)
+    - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCombinatorics/ExercisesCombinatorics.pdf)
+    - [Solutions](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCombinatorics/ExercisesCombinatorics-Solutions.pdf)
 - Session 2 (26th of August 2025): Calculus
-    - Notes
-    - Problem Set
+    - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCalculus/NotesCalculus.pdf)
+    - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCalculus/ExercisesCalculus.pdf)
     - Solutions
 - Session 3 (28th of August 2025): Optimization
     - Notes
