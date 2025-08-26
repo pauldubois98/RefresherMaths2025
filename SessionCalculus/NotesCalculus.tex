@@ -19,7 +19,7 @@
 
 %opening
 \title{Notes on Calculus}
-\author{DSBA Mathematics Refresher 2024}
+\author{DSBA Mathematics Refresher 2025}
 \date{}
 
 \begin{document}
@@ -103,7 +103,7 @@
 	\section{Integration by Parts}
 	Integration by parts is based on the product rule for differentiation and is given by:
 	$$
-	\int u dv = uv - \int v du
+	\int u v' = uv - \int u' v
 	$$
 	where $u = f(x)$ and $dv = g(x) dx$. Steps:
 	\begin{enumerate}
@@ -126,6 +126,10 @@
 	Integration by substitution is used when the integral can be transformed into a simpler form by substituting $u = g(x)$. The substitution formula is:
 	$$
 	\int f(g(x)) \frac{d g(x)}{dx} dx = \int f(u)\,du
+	$$
+	or
+	$$
+	\int f(u) \frac{du}{dx} dx = \int f(u)\,du
 	$$
 	Steps:
 	\begin{enumerate}
