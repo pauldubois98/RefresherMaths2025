@@ -13,10 +13,10 @@ Validating a session can be done either by *coming in person to the session*, or
 - Session 2 (26th of August 2025): Calculus
     - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCalculus/NotesCalculus.pdf)
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCalculus/ExercisesCalculus.pdf)
-    - Solutions
+    - [Solutions](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCalculus/ExercisesCalculus-Solutions.pdf)
 - Session 3 (28th of August 2025): Optimization
-    - Notes
-    - Problem Set
+    - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionOptimization/NotesOptimization.pdf)
+    - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionOptimization/ExercisesOptimization.pdf)
     - Solutions
 - Session 4 & 5 (28th of August 2025): Linear Algebra
     - Notes
