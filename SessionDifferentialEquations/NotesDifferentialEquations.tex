@@ -1,0 +1,162 @@
+\documentclass[]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Primes}{\mathbb{P}}
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\txtand}{\text{ and }}
+\newcommand{\txtor}{\text{ or }}
+\newcommand{\lxor}{\veebar}
+
+%opening
+\title{Notes on Differential Equations}
+\author{DSBA Mathematics Refresher 2025}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		
+	\end{abstract}
+	
+	\section{Applications of Differential Equations}
+	Differential equations play a significant role in various applications within data science and business. These applications demonstrate the versatility of differential equations in modeling complex, dynamic systems across diverse fields, aiding in decision-making and strategic planning.
+	\subsection{Predictive Modeling in Finance}
+	\paragraph{Black-Scholes Model}\noindent\\
+	This is a partial differential equation used to estimate the price of options and other financial derivatives.
+	It helps traders and analysts predict the future behavior of asset prices and manage financial risk.
+	\subsection{Economics and Market Dynamics}
+	\begin{itemize}
+		\item \textbf{Macroeconomic Modeling}\noindent\\
+		Differential equations are used to model economic growth, inflation, and interest rates.
+		For example, the Solow growth model uses differential equations to describe how capital accumulation and technological progress impact economic growth.
+		\item \textbf{Epidemic Models}\\
+		In business, especially during crises like pandemics, models such as SIR (Susceptible-Infected-Recovered) are used to predict the spread of disease and its impact on markets and workforce productivity.
+	\end{itemize}
+	\subsection{Customer Behavior and Marketing}
+	\begin{itemize}
+		\item \textbf{Diffusion Models}\noindent\\
+		Differential equations are used to model the adoption of new products and technologies in markets.
+		The Bass Diffusion Model, for instance, predicts the rate at which a new product will be adopted over time, helping companies strategize marketing and sales efforts.
+		\item \textbf{Churn Prediction}\noindent\\
+		Models based on differential equations can predict customer churn by analyzing the rates of customer acquisition and departure over time, allowing businesses to implement targeted retention strategies.
+	\end{itemize}
+	\subsection{Supply Chain and Inventory Management}
+	\paragraph{Dynamic Systems}\noindent\\
+	Differential equations are used to model inventory levels over time, helping businesses optimize ordering strategies and reduce holding costs.
+	The equations can account for varying demand rates and lead times, improving supply chain efficiency.
+	\subsection{Environmental Analysis}
+	\paragraph{Time Series Analysis}\noindent\\
+	Differential equations are used to model and predict changes in environmental data, such as air quality, temperature, or pollution levels.
+	These models help businesses in energy and agriculture make data-driven decisions.
+	
+	
+	
+	\section{First-Order Differential Equations}
+	
+	A first-order differential equation can often be written in the form:
+	$$
+	\frac{dy}{dx} + P(x) \cdot y = Q(x)
+	$$
+	To solve this, we use an integrating factor "$\text{IF}$" which is defined as:
+	$$
+	\text{IF} = e^{\int P(x) \, dx}
+	$$
+	Multiplying both sides of the differential equation by $\text{IF}$ gives:
+	$$
+	\text{IF} \cdot \frac{dy}{dx} + \text{IF} \cdot P(x) \cdot y = \text{IF} \cdot Q(x)
+	$$
+	The left side of the equation is now the derivative of the product $\text{IF} \cdot y$:
+	$$
+	\frac{d}{dx}\left[\text{IF} \cdot y\right] = \text{IF} \cdot Q(x)
+	$$
+	Integrating both sides with respect to $x$:
+	$$
+	\text{IF} \cdot y = \int \text{IF} \cdot Q(x) \, dx + C
+	$$
+	Finally, solve for $y(x)$:
+	$$
+	y(x) = \frac{1}{\text{IF}}\left[\int \text{IF} \cdot Q(x) \, dx + C\right]
+	$$
+	
+	\paragraph{Initial Conditions}
+	
+	Consider the same first-order equation with an initial condition $y(x_0) = y_0$.
+	After finding the general solution as in the previous section:
+	$$
+	y(x) = \frac{1}{\text{IF}}\left[\int \text{IF} \cdot Q(x) \, dx + C\right]
+	$$
+	Apply the initial condition to find $C$:
+	$$
+	y(x_0) = \frac{1}{\text{IF}(x_0)}\left[\int \text{IF}Q(x) \, dx \mid_{x_0} + C\right] = y_0
+	$$
+	Solve for $C$ and conclude.
+	
+	\section{(Homogeneous) Second-Order Linear Differential Equations}
+	
+	A second-order homogeneous linear differential equation is of the form:
+	$$
+	a\frac{d^2y}{dx^2} + b\frac{dy}{dx} + cy = 0
+	$$
+	The characteristic equation associated with this differential equation is:
+	$$
+	ar^2 + br + c = 0
+	$$
+	The nature of the solutions depends on the discriminant $\Delta = b^2 - 4ac$:
+	\begin{itemize}
+		\item If $\Delta > 0$, the roots $r_1$ and $r_2$ are real and distinct.
+		The solution is: $y(x) = C_1e^{r_1x} + C_2e^{r_2x}$.
+		\item If $\Delta = 0$, the roots are real and repeated $r_1 = r_2 = r$.
+		The solution is: $y(x) = (C_1 + C_2x)e^{rx}$.
+		\item If $\Delta < 0$, the roots are complex $r_{1,2} = \alpha \pm i\beta$.
+		The solution is: $y(x) = e^{\alpha x}(C_1\cos(\beta x) + C_2\sin(\beta x))$.
+	\end{itemize}
+	
+	\section{Second-Order Linear Differential Equations}
+	
+	For the general second-order linear differential equation:
+	$$
+	a\frac{d^2y}{dx^2} + b\frac{dy}{dx} + cy = g(x)
+	$$
+	The solution is the sum of the complementary function $y_c(x)$
+	(the solution to the associated homogeneous equation)
+	and a particular solution $y_p(x)$:
+	$$
+	y(x) = y_c(x) + y_p(x)
+	$$
+	
+	The method for finding $y_p(x)$ depends on the form of $g(x)$:
+	\begin{itemize}
+		\item If $g(x)$ is a polynomial, use the method of undetermined coefficients.
+		\item If $g(x)$ is of an exponential or trigonometric form, use an answer of a similar form.
+		\item For other forms of $g(x)$, the method of variation of parameters can be used.
+	\end{itemize}
+	
+	\paragraph{Initial Conditions}
+	
+	Given the general solution:
+	$$
+	y(x) = y_c(x) + y_p(x)
+	$$
+	And initial conditions $y(x_0) = y_0$ and $\frac{dy}{dx}\Big|_{x=x_0} = y'_0$, we determine the constants $C_1$ and $C_2$ in $y_c(x)$:
+	$$
+	y(x_0) = y_c(x_0) + y_p(x_0) = y_0
+	$$
+	$$
+	\frac{dy}{dx}\Big|_{x=x_0} = y'_c(x_0) + y'_p(x_0) = y'_0
+	$$
+	Solving these two equations will yield the specific values of $C_1$ and $C_2$ that satisfy the initial conditions, leading to the particular solution for the problem.
+	
+	
+\end{document}
