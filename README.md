@@ -19,8 +19,8 @@ Validating a session can be done either by *coming in person to the session*, or
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionOptimization/ExercisesOptimization.pdf)
     - Solutions
 - Session 4 & 5 (28th of August 2025): Linear Algebra
-    - Notes
-    - Problem Set
+    - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionLinearAlgebra/NotesLinearAlgebra.pdf)
+    - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionLinearAlgebra/ExercisesLinearAlgebra.pdf)
     - Solutions
 - Session 6 (29th of August 2025): Principal Components Analysis
     - Notes
