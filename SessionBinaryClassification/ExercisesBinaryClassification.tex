@@ -1,0 +1,236 @@
+\documentclass[]{article}
+
+%opening
+\title{Exercises Set: Binary Classification}
+\author{DSBA Mathematics Refresher 2025}
+\date{}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Primes}{\mathbb{P}}
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\txtand}{\text{ and }}
+\newcommand{\txtor}{\text{ or }}
+\newcommand{\lxor}{\veebar}
+\newcommand{\vecx}{ \vec{\mathbf{x}} }
+\newcommand{\vecxk}{ \vec{\mathbf{x_k}} }
+\newcommand{\vecw}{ \vec{\mathbf{w}} }
+
+
+\begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		As this is the last session, there will be no compulsory questions this time.
+	\end{abstract}	
+	
+	\section{Lagrangian multiplier technique}
+	\begin{center}
+		\includegraphics[height=4cm]{Lagrange}
+	\end{center}
+	
+	\subsection{Unconstrained optimization}
+	Let $f(x,y) = 2x^2-12x + 4y^2 + 8y + 20$.\\
+	Find $(x^*,y^*) \in \R^2$ such that $f$ reaches its minimum (i.e. $f(x^*,y^*) \leq f(x,y) \quad \forall (x,y) \in \R^2$).
+	
+	\subsection{(Equality) Constrained optimization}
+	Let $f(x,y) = 2x^2-12x + 4y^2 + 8y + 20$.\\
+	Suppose further that we want $3x + 5y = 2$.\\
+	Find $(x^*,y^*) \in \R^2$ such that $3x^* + 5y^* = 2$ and $f$ reaches its minimum (i.e. $f(x^*,y^*) \leq f(x,y) \quad \forall (x,y) \in \R^2,\ 3x + 5y = 2$).
+	
+	\subsection{Lagrange multiplier}
+	Let $f(x,y) = 2x^2-12x + 4y^2 + 8y + 20$.\\
+	Suppose further that we want $3x + 5y = 2$.\\
+	Let $\mathcal{L}(x,y,\lambda) = f(x,y) - \lambda (3x +5y - 2)$.\\
+	Find the point where $\nabla \cdot \mathcal{L} = 0$
+	
+	\subsection{(Inequality) Constrained optimization}
+	Let $f(x) = x^2-2x$.\\
+	Suppose further that we want $3x \leq 2$.\\
+	Find $x^* \in \R$ such that $3x^* \leq 2$ and $f$ reaches its minimum (i.e. $f(x^*) \leq f(x) \quad \forall x \in \R,\ 3x \leq 2$).
+	\vspace{0.5cm}
+	\\
+	Let $f(x) = x^2+2x$.\\
+	Suppose further that we want $3x \leq 2$.\\
+	Find $x^* \in \R$ such that $3x^* \leq 2$ and $f$ reaches its minimum (i.e. $f(x^*) \leq f(x) \quad \forall x \in \R,\ 3x \leq 2$).
+	
+	\subsection{Lagrange multiplier}
+	Let $f(x) = x^2-2x$.\\
+	Suppose further that we want $3x \leq 2$.\\
+	Let $\mathcal{L}(x,\lambda) = f(x) - \lambda (-3x + 2 - s^2)$.\\
+	Find the point where $\nabla \cdot \mathcal{L} = 0$ and $\lambda \geq 0$.
+	\vspace{0.5cm}
+	\\
+	Let $f(x) = x^2+2x$.\\
+	Suppose further that we want $3x \leq 2$.\\
+	Let $\mathcal{L}(x,\lambda) = f(x) - \lambda (-3x + 2 - s^2)$.\\
+	Find the point where $\nabla \cdot \mathcal{L} = 0$ and $\lambda \geq 0$.
+	
+	
+	
+	
+	
+	\section{Support Vector Machines}
+	\begin{center}
+		\includegraphics[height=4cm]{SVM_illustration}
+	\end{center}
+	
+	\subsection{Theory}
+	Define a line in $\R^2$ with parameters $\vecw = \begin{pmatrix} w_1 \\ w_2 \end{pmatrix}$ and $b$
+	\footnote{
+		Here, $\vecw = \begin{pmatrix} w_1 \\ w_2 \end{pmatrix}$, $\vecx = \begin{pmatrix} x \\ y \end{pmatrix}$, and $b$ is a scalar.
+		We use this notation because it makes it very easy to extend the technique to higher dimensions.
+		For example, you can just add one component to use a plane to separate points in $\mathbb{R}^3$
+	}
+	defined by $\vecw.\vecx = b$ (or $\vecw.\vecx - b = 0$) for $\vecx = \begin{pmatrix} x \\ y \end{pmatrix} \in \R^2$.
+	This line cut the plane in 2 regions:
+	\begin{itemize}
+		\item $\mathcal{R}_{-1}$: $\vecx \in \R^2$ such that $\vecw.\vecx - b < 0$
+		\item $\mathcal{R}_{+1}$: $\vecx \in \R^2$ such that $\vecw.\vecx - b > 0$
+	\end{itemize}
+	The goal is to find $\vecw$ and $b$ such that all points of the first class are in the first region, and all points of the second class are in the second region.
+	
+	Let our data be $\{ (\vecxk, y_k) \}_{k=1}^N$ where $\vecxk$ is the coordinate of the point in $\R^2$ and $y_k$ is the label ($+1$ or $-1$).
+	
+	The best line is not only separating the data in two sets, but also maximizing the distance between the line and the points.
+	
+	\noindent \textbf{\textit{TODO:}}
+	Calculate the distance between the line and a point $\vecx \in \R^2$.
+	% distance: $\frac{\mid \vecw \cdot \vecx - b \mid}{\mid \mid \vecw \mid \mid}$	
+	
+	\vspace{0.5cm}
+	
+	Let $h(\vecx) = \vecw^T \cdot \vecx - b$.
+	We will predict first class $-1$ if $h(\vecx)<0$ (as this means $\vecx \in \mathcal{R}_{-1}$); and second class $+1$ if $h(\vecx)>0$ (as this means $\vecx \in \mathcal{R}_{+1}$).
+	To have each item of data classified correctly, we need:
+	\begin{itemize}
+		\item if $y_k = +1$ then $h(\vecxk)>0$
+		\item if $y_k = -1$ then $h(\vecxk)<0$
+	\end{itemize}
+	\noindent \textbf{\textit{TODO:}}
+	Derive a condition that ensures correct classification if true for all $k$.
+	% need: $y_k \cdot h(\vecxk) > 0 \ \forall k$.
+	
+	\vspace{0.5cm}
+	
+	Assuming the data is linearly separable, we now define 3 regions:
+	\begin{itemize}
+		\item $\mathcal{R}_{-1}$: $\vecx \in \R^2$ such that $\vecw.\vecx - b < -1$
+		\item $\mathcal{R}_{ 0}$: $\vecx \in \R^2$ such that $\mid \vecw.\vecx - b \mid < 1$ \textit{(the "margin band")}
+		\item $\mathcal{R}_{+1}$: $\vecx \in \R^2$ such that $\vecw.\vecx - b > 1$
+	\end{itemize}
+	\noindent \textbf{\textit{TODO:}}
+	Calculate the margin band width.
+	% margin size: $\frac{2}{\mid \mid \vecw \mid \mid}$
+	
+	\noindent \textbf{\textit{TODO:}}
+	Formulate the constrained optimization problem to find the best (i.e. maximizing the margin) parameters $\vecw$ and $b$.
+	% problem: $\text{minimize}_{\vecxw, b} \mid \mid \vecw \mid \mid$
+	% such that $y_k (\vecw.\vecxk - b) \geq -1 \quad \forall k$
+	
+	\subsection{Practice}
+	The training dataset consists of the following data points:
+	
+	Positive class ("+1"):
+	\begin{itemize}
+		\item (2, 2)
+		\item (1, 1)
+	\end{itemize}
+	Negative class ("-1"):
+	\begin{itemize}
+		\item (0, 1)
+		\item (1, 0)
+	\end{itemize}
+	
+	\begin{enumerate}
+		\item Plot the points in a 2D graph.
+		\item Using the graph, find the optimal $\vecw$.
+		\item Calculate the optimal value of \(b\) to separate the data points while maximizing the margin.
+		\item Determine the equation of the optimal hyperplane in the form \(\vecw \cdot \vecx + b = 0\).
+		\item Identify the support vectors in the dataset.
+		\item Calculate the margin, which is the perpendicular distance from the hyperplane to the nearest support vector.
+		\item Classify a new data point, \((3, 2)\), based on the learned SVM model.
+	\end{enumerate}
+	\textit{Remarks:}\\
+	Here, we have made educated guesses to find $\vecw$ and $b$; in practice, we need to solve the constrained optimization problem stated above.\\
+	This can be done using Lagrange multiplier, the details are outside the scope of this course.\\
+	In practice, we let computers solve the problem for us.
+	
+	
+	
+	\subsection{Kernel}
+	Suppose we have the following data:
+	Positive class ("+1"):
+	\begin{itemize}
+		\item (0, 1)
+		\item (0, -1)
+		\item (1, 0)
+		\item (-1, 0)
+	\end{itemize}
+	Negative class ("-1"):
+	\begin{itemize}
+		\item (0, 2)
+		\item (0, -2)
+		\item (2, 0)
+		\item (-2, 0)
+	\end{itemize}
+	Plot the data points.\\
+	Observe that there is no line separating the two classes perfectly.
+	
+	\vspace{0.5cm}
+	
+	Let $\phi(x,y) = (x^2 + y^2, x^2-y^2)$.
+	Compute $\phi(x,y)$ for every point, and plot them on a new graph.\\
+	Observe that the two classes should now be separable by a line
+	\footnote{
+		The "kernel trick" allows us to perform an SVM on data transformed by a non-linear function; the details are outside the scope of this course.
+	}.
+	
+	
+	
+	
+	\section{Logistic Regression}
+	You are working on a binary classification problem where you are using logistic regression to predict whether a student will pass (1) or fail (0) an exam based on the number of hours they have studied. You have collected the data in the provided table.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|c|}
+			\hline
+			Hours Studied ($X$) & Pass ($Y$) \\
+			\hline
+			0 & 0 (no) \\
+			4 & 0 (no) \\
+			3 & 1 (yes) \\
+			8 & 1 (yes) \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	You want to fit a logistic regression model to this data and find the best-fitting sigmoid function, which is represented as:
+	$$P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1X)}}$$
+	Where $P(Y=1|X)$ is the probability of passing the exam given the hours studied.
+	
+	\begin{enumerate}
+		%\item Calculate the log-odds for each data point, which is $\log\left(\frac{P(Y=1|X)}{1-P(Y=1|X)}\right)$.
+		\item Calculate the cost function (log loss) for the given data and the predicted probabilities. The log loss for a single data point is given as:
+		$$\text{Log Loss} = -\left(Y \cdot \log(P(Y=1|X)) + (1 - Y) \cdot \log(1 - P(Y=1|X))\right)$$
+		\item Calculate the total cost (log loss) summing for all data points.
+		\item Use gradient descent or any other optimization method to find the values of $\beta_0$ and $\beta_1$ that minimize the total cost; you may use a computer to perform gradient descent.
+		\item Calculate the probability $P(Y=1|X=10)$ using the logistic regression model\footnote{That is, the estimated probability of passing given the fact that the student have been studying for ten hours.}.
+		\item Calculate the probability $P(Y=1|X=1)$ using the logistic regression model\footnote{That is, the estimated probability of passing given the fact that the student have been studying for one hour.}.
+		\item Calculate the probability $P(Y=1|X=0)$ using the logistic regression model\footnote{That is, the estimated probability of passing given the fact that the student have not studied at all.}.
+	\end{enumerate}
+	
+	
+\end{document}
