@@ -27,7 +27,8 @@ Validating a session can be done either by *coming in person to the session*, or
     - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionPCA/NotesPCA.pdf)
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionPCA/ExercisesPCA.pdf)
     - [Notebook](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionPCA/NotebookPCA.ipynb)
-    - Solutions
+    - [Notebook Solutions](https://github.com/pauldubois98/RefresherMaths2024/blob/main/SessionPCA/NotebookPCA_solutions.ipynb)
+    - [Notebook Solutions PDF](https://github.com/pauldubois98/RefresherMaths2024/blob/main/SessionPCA/NotebookPCA_solutions.pdf)
 - Session 7 (29th of August 2025): Binary Classification
     - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionBinaryClassification/NotesBinaryClassification.pdf)
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionBinaryClassification/ExercisesBinaryClassification.pdf)
