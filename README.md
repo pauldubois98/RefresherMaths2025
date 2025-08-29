@@ -31,7 +31,7 @@ Validating a session can be done either by *coming in person to the session*, or
 - Session 7 (29th of August 2025): Binary Classification
     - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionBinaryClassification/NotesBinaryClassification.pdf)
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionBinaryClassification/ExercisesBinaryClassification.pdf)
-    - Solutions
+    - [Solutions](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionBinaryClassification/ExercisesBinaryClassification-Solutions.pdf)
 - Session 8 (29st of August 2025): Differential Equations
     - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionDifferentialEquations/NotesDifferentialEquations.pdf)
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionDifferentialEquations/ExercisesDifferentialEquations.pdf)
