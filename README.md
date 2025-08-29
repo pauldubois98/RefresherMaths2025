@@ -24,15 +24,14 @@ Validating a session can be done either by *coming in person to the session*, or
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionLinearAlgebra/ExercisesLinearAlgebra.pdf)
     - [Solutions](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionLinearAlgebra/ExercisesLinearAlgebra-Solutions.pdf)
 - Session 6 (29th of August 2025): Principal Components Analysis
-    - Notes
-    - Problem Set
+    - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionPCA/NotesPCA.pdf)
+    - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionPCA/ExercisesPCA.pdf)
     - Solutions
 - Session 7 (29th of August 2025): Binary Classification
-    - Notes
-    - Problem Set
+    - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionBinaryClassification/NotesBinaryClassification.pdf)
+    - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionBinaryClassification/ExercisesBinaryClassification.pdf)
     - Solutions
 - Session 8 (29st of August 2025): Differential Equations
-    - Notes
-    - Problem Set
+    - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionDifferentialEquations/NotesDifferentialEquations.pdf)
+    - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionDifferentialEquations/ExercisesDifferentialEquations.pdf)
     - Solutions
-
