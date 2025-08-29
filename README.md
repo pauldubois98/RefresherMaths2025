@@ -26,6 +26,7 @@ Validating a session can be done either by *coming in person to the session*, or
 - Session 6 (29th of August 2025): Principal Components Analysis
     - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionPCA/NotesPCA.pdf)
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionPCA/ExercisesPCA.pdf)
+    - [Notebook](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionPCA/NotebookPCA.ipynb)
     - Solutions
 - Session 7 (29th of August 2025): Binary Classification
     - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionBinaryClassification/NotesBinaryClassification.pdf)
