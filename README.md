@@ -13,7 +13,9 @@ Validating a session can be done either by *coming in person to the session*, or
 - Session 2 (26th of August 2025): Calculus
     - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCalculus/NotesCalculus.pdf)
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCalculus/ExercisesCalculus.pdf)
-    - [Solutions](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCalculus/ExercisesCalculus-Solutions.pdf)
+    - [Solutions](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionCalculus/ExercisesCalculus-Solutions.pdf)<br>
+NB (spotted by Wanchao ZHAO):
+There is a mistake in the exercise solutions to question "D", the integration of $\sin(x)$ is $-\cos(x)$, so the final answer should be $(0.25 e^{2x}(cos(2x)+sin(2x))+c$ instead of $0.25 e^{2x}(\cos(2x)-\sin(2x))+c$.
 - Session 3 (28th of August 2025): Optimization
     - [Notes](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionOptimization/NotesOptimization.pdf)
     - [Problem Set](https://github.com/pauldubois98/RefresherMaths2025/blob/main/SessionOptimization/ExercisesOptimization.pdf)
